@@ -1,0 +1,60 @@
+<div class="container">
+  <div *ngFor="let data of articles; index as i">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <p class=styles>
+              {{data.section}}
+            </p>
+            <p class=headline>
+              {{data.title}}
+            </p>
+            <p class="by">
+              {{data.byline}}
+            </p>
+            <p class="date">
+              {{data.created_date}}
+            </p>
+            <p class="abstract">
+              {{data.abstract}}
+            </p>
+            <p class="type">
+              {{data.item_type}}
+            </p>
+            <p class="type"><a href="{{data.short_url}}">
+                continue reading</a>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img class ="image" src="{{data.multimedia[4].url}}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-Mail</th>
+      <th scope="col" sortable="true">Gender</th>
+      <th scope="col">UserName</th>
+      <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of articles; index as i">
+          <th scope="row">{{data.id}}</th>
+          <td>{{ data.abstract}}</td>
+          <td>{{ data.email }}</td>
+          <td>{{ data.Gender }}</td>
+          <td>{{ data.username }}</td>
+         <td><button type="button"(click)="detail(data)">view</button>
+            <button class="btn btn-outline-primary mb-2 mr-2" (click)="edit(data,i)">Edit</button>
+        </td>
+        </tr>
+      </tbody>
+  </table> -->
